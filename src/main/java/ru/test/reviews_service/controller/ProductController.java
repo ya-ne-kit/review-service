@@ -13,6 +13,8 @@ import ru.test.reviews_service.dto.UpdateProductDto;
 import ru.test.reviews_service.entity.Product;
 import ru.test.reviews_service.service.ProductService;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/products")
@@ -21,7 +23,7 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping
-    public Page<Product> getAllProducts(@PageableDefault(size = 10) Pageable pageable,
+    public List<Product> getAllProducts(@PageableDefault(size = 10) Pageable pageable,
                                         @RequestParam(required = false) Integer page,
                                         @RequestParam(required = false) Integer size) {
         if (page != null && size != null) {

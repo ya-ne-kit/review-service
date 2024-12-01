@@ -12,6 +12,8 @@ import ru.test.reviews_service.entity.Product;
 import ru.test.reviews_service.repository.ProductRepository;
 import ru.test.reviews_service.util.ModelMapper;
 
+import java.util.List;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -19,9 +21,9 @@ public class ProductService {
     private final ProductRepository productRepository;
     private final ModelMapper modelMapper;
 
-    public Page<Product> getAllProducts(Pageable pageable) {
+    public List<Product> getAllProducts(Pageable pageable) {
         log.info("INFO: find all entities request T:Product {{}}", pageable.toString());
-        return productRepository.findAll(pageable);
+        return productRepository.findAll(pageable).getContent();
     }
 
     public Product getProductById(Long id) {
