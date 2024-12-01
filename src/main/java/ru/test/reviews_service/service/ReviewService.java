@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import ru.test.reviews_service.dto.NewReviewDto;
 import ru.test.reviews_service.dto.ReviewShortDto;
 import ru.test.reviews_service.dto.UpdateReviewDto;
-import ru.test.reviews_service.entity.Product;
 import ru.test.reviews_service.entity.Review;
 import ru.test.reviews_service.repository.ReviewRepository;
 import ru.test.reviews_service.util.ModelMapper;

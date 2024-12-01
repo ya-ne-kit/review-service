@@ -22,7 +22,7 @@ public class ReviewController {
 
     @GetMapping("/product/{productId}")
     public List<ReviewShortDto> getReviewsByProductId(@PathVariable Long productId,
-                                                      @PageableDefault(size = 10) Pageable pageable,
+                                                      @PageableDefault Pageable pageable,
                                                       @RequestParam(required = false) Integer page,
                                                       @RequestParam(required = false) Integer size) {
         if (page != null && size != null) {

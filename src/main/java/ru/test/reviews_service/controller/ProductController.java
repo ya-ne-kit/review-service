@@ -3,7 +3,6 @@ package ru.test.reviews_service.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -23,7 +22,7 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping
-    public List<Product> getAllProducts(@PageableDefault(size = 10) Pageable pageable,
+    public List<Product> getAllProducts(@PageableDefault Pageable pageable,
                                         @RequestParam(required = false) Integer page,
                                         @RequestParam(required = false) Integer size) {
         if (page != null && size != null) {
