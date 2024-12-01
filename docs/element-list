@@ -1,0 +1,7 @@
+ru.test.reviews_service
+ru.test.reviews_service.controller
+ru.test.reviews_service.dto
+ru.test.reviews_service.entity
+ru.test.reviews_service.repository
+ru.test.reviews_service.service
+ru.test.reviews_service.util
