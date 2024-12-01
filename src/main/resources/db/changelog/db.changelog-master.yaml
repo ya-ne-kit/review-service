@@ -54,10 +54,8 @@ databaseChangeLog:
                   name: cons
                   type: text
               - column:
-                  name: nickname
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
+                  name: rate
+                  type: int
               - column:
                   name: email
                   type: varchar(255)
